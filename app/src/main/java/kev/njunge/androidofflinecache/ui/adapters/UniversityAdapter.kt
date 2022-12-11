@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import kev.njunge.androidofflinecache.data.University
 import kev.njunge.androidofflinecache.databinding.UniversityItemBinding
 
-class UniversityAdapter : ListAdapter<University, UniversityAdapter.UniversityViewHolder>(UniversityComparator()) {
+class UniversityAdapter :
+    ListAdapter<University, UniversityAdapter.UniversityViewHolder>(UniversityComparator()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UniversityViewHolder {
         val binding =
             UniversityItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -29,7 +30,6 @@ class UniversityAdapter : ListAdapter<University, UniversityAdapter.UniversityVi
             binding.apply {
                 tvUniversityName.text = university.name
                 tvUniversityCountry.text = university.country
-                tvUniversityWebsite.text = university.web_pages[0]
 
             }
         }
